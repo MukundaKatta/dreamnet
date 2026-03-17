@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "dreamnet"
+version = "0.1.0"
+description = "AI Hallucination as Dreaming - Research into parallels between LLM hallucinations and human dream theory"
+authors = [{name = "Mukunda Katta"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+dreamnet = "dreamnet.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
